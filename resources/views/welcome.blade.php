@@ -81,17 +81,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Three-Lines
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div>
+                  <p>シェアするリンクの記事</p>
+                  <input type="text" size="80">
                 </div>
+
+                <div>
+                  <p>3行にまとめよう！</p>
+                  <input type="text" size="80"><br>
+                  <input type="text" size="80"><br>
+                  <input type="text" size="80"><br>
+                </div>
+
+                <input type="button" value="シェア！">
+
             </div>
         </div>
     </body>
