@@ -98,7 +98,6 @@
 
                 <input type="button" value="シェア！">
 
-              </div>
             </div>
         </div>
     </body>
