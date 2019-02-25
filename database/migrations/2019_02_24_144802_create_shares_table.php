@@ -15,10 +15,11 @@ class CreateSharesTable extends Migration
     {
         Schema::create('shares', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('url', 20);
+            $table->string('url', 2100);
             $table->string('text1', 30);
             $table->string('text2', 30);
             $table->string('text3', 30);
+            $table->string('comment')->nullable();
         });
     }
 
