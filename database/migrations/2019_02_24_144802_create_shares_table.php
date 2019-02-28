@@ -19,6 +19,7 @@ class CreateSharesTable extends Migration
             $table->string('text1', 30)->comment('３行にまとめるの1');
             $table->string('text2', 30)->comment('３行にまとめるの2');
             $table->string('text3', 30)->comment('３行にまとめるの3');
+            $table->timestamps();
         });
     }
 

@@ -11,11 +11,7 @@ class ShareController extends Controller
     public function  create(Request $request)
     {
         $share = new Share();
-        $share->url = $request->url;
-        $share->text1 = $request->text1;
-        $share->text2 = $request->text2;
-        $share->text3 = $request->text3;
-        $share->save();
+        $share->fill($request->all())->save();
 
         return view('welcome');
     }    

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Share extends Model
 {
-    public $timestamps = false;
+    protected $fillable = ['id', 'url', 'text1', 'text2', 'text3'];
 }

@@ -85,17 +85,17 @@
                 </div>
                 
                 <form method="post" action="{{ ('/') }}">
-                  {{ csrf_field() }}
+                    {{ csrf_field() }}
                     <div>
-                    <p>シェアするリンクの記事</p>
-                    <input type="text" name="url" size="80">
+                        <p>シェアするリンクの記事</p>
+                        <input type="text" name="url" size="80">
                     </div>
 
                     <div>
-                    <p>3行にまとめよう！</p>
-                    <input type="text" name="text1" size="80"><br>
-                    <input type="text" name="text2" size="80"><br>
-                    <input type="text" name="text3" size="80"><br>
+                        <p>3行にまとめよう！</p>
+                        <input type="text" name="text1" size="80"><br>
+                        <input type="text" name="text2" size="80"><br>
+                        <input type="text" name="text3" size="80"><br>
                     </div>
 
                     <input type="submit" value="シェア！">
