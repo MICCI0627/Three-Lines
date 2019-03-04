@@ -84,15 +84,13 @@
                     Three-Lines
                 </div>
                 
-                <div class="">
+                <div>
                     @if($errors->any())
-                    <div class="">
                         <ul>
                         @foreach($errors->all() as $message)
                             <li>{{ $message }}</li>
                         @endforeach
                         </ul>
-                    </div>
                     @endif
 
                     <form method="post" action="{{ ('/') }}">
