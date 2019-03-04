@@ -91,14 +91,39 @@
 
                 <div>
                   <p>3行にまとめよう！</p>
-                  <input type="text" size="80"><br>
-                  <input type="text" size="80"><br>
-                  <input type="text" size="80"><br>
+                  <input type="text" class="text1" size="80"><br>
+                  <input type="text" class="text2" size="80"><br>
+                  <input type="text" class="text3" size="80"><br>
                 </div>
 
-                <input type="button" value="シェア！">
+                <div class="output1"></div>
+                <div class="output2"></div>
+                <div class="output3"></div>
+
+                <input type="button" id="button" value="シェア！">
 
             </div>
         </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(function(){
+
+            $('.text1').change(function(){
+              $('.output1').text( '・' + $(this).val() );
+            });
+
+            $('.text2').change(function(){
+              $('.output2').text( '・' + $(this).val() );
+            });
+
+            $('.text3').change(function(){
+              $('.output3').text( '・' + $(this).val() );
+            });
+        
+
+        });
+      </script>
+
     </body>
 </html>
