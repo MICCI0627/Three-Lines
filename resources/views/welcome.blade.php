@@ -84,22 +84,32 @@
                     Three-Lines
                 </div>
                 
-                <form method="post" action="{{ ('/') }}">
-                    {{ csrf_field() }}
-                    <div>
-                        <p>シェアするリンクの記事</p>
-                        <input type="text" name="url" size="80">
-                    </div>
+                <div>
+                    @if($errors->any())
+                        <ul>
+                            @foreach($errors->all() as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
 
-                    <div>
-                        <p>3行にまとめよう！</p>
-                        <input type="text" name="text1" size="80"><br>
-                        <input type="text" name="text2" size="80"><br>
-                        <input type="text" name="text3" size="80"><br>
-                    </div>
+                    <form method="post" action="{{ ('/') }}">
+                        {{ csrf_field() }}
+                        <div>
+                            <p>シェアするリンクの記事</p>
+                            <input type="text" name="url" value="{{ old('url') }}" size="80">
+                        </div>
 
-                    <input type="submit" value="シェア！">
-                </form>
+                        <div>
+                            <p>3行にまとめよう！</p>
+                            <input type="text" name="text1" value="{{ old('text1') }}" size="80"><br>
+                            <input type="text" name="text2" value="{{ old('text2') }}" size="80"><br>
+                            <input type="text" name="text3" value="{{ old('text3') }}" size="80"><br>
+                        </div>
+
+                        <input type="submit" value="シェア！">
+                    </form>
+                </div>    
             </div>
         </div>
     </body>
