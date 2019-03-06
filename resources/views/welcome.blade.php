@@ -85,23 +85,35 @@
                 </div>
 
                 <div>
-                  <p>シェアするリンクの記事</p>
-                  <input type="text" size="80">
+                  @if($errors->any())
+                        <ul>
+                            @foreach($errors->all() as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+
+                    <form method="post" action="{{ ('/') }}">
+                        {{ csrf_field() }}
+                        <div>
+                            <p>シェアするリンクの記事</p>
+                            <input type="text" name="url" value="{{ old('url') }}" size="80">
+                        </div>
+
+                        <div>
+                            <p>3行にまとめよう！</p>
+                            <input type="text" name="text1" value="{{ old('text1') }}" class="text1" size="80"><br>
+                            <input type="text" name="text2" value="{{ old('text2') }}" class="text2" size="80"><br>
+                            <input type="text" name="text3" value="{{ old('text3') }}" class="text3" size="80"><br>
+                        </div>
+
+                        <div class="output1"></div>
+                        <div class="output2"></div>
+                        <div class="output3"></div>
+
+                        <input type="submit" value="シェア！">
+                    </form>
                 </div>
-
-                <div>
-                  <p>3行にまとめよう！</p>
-                  <input type="text" class="text1" size="80"><br>
-                  <input type="text" class="text2" size="80"><br>
-                  <input type="text" class="text3" size="80"><br>
-                </div>
-
-                <div class="output1"></div>
-                <div class="output2"></div>
-                <div class="output3"></div>
-
-                <input type="button" id="button" value="シェア！">
-
             </div>
         </div>
 
@@ -120,7 +132,7 @@
             $('.text3').change(function(){
               $('.output3').text( '・' + $(this).val() );
             });
-        
+
 
         });
       </script>
