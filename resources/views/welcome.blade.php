@@ -83,9 +83,9 @@
                 <div class="title m-b-md">
                     Three-Lines
                 </div>
-                
+
                 <div>
-                    @if($errors->any())
+                  @if($errors->any())
                         <ul>
                             @foreach($errors->all() as $message)
                                 <li>{{ $message }}</li>
@@ -102,15 +102,39 @@
 
                         <div>
                             <p>3行にまとめよう！</p>
-                            <input type="text" name="text1" value="{{ old('text1') }}" size="80"><br>
-                            <input type="text" name="text2" value="{{ old('text2') }}" size="80"><br>
-                            <input type="text" name="text3" value="{{ old('text3') }}" size="80"><br>
+                            <input type="text" name="text1" value="{{ old('text1') }}" class="text1" size="80"><br>
+                            <input type="text" name="text2" value="{{ old('text2') }}" class="text2" size="80"><br>
+                            <input type="text" name="text3" value="{{ old('text3') }}" class="text3" size="80"><br>
                         </div>
+
+                        <div class="output1"></div>
+                        <div class="output2"></div>
+                        <div class="output3"></div>
 
                         <input type="submit" value="シェア！">
                     </form>
-                </div>    
+                </div>
             </div>
         </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(function(){
+
+            $('.text1').change(function(){
+              $('.output1').text( '・' + $(this).val() );
+            });
+
+            $('.text2').change(function(){
+              $('.output2').text( '・' + $(this).val() );
+            });
+
+            $('.text3').change(function(){
+              $('.output3').text( '・' + $(this).val() );
+            });
+
+        });
+      </script>
+
     </body>
 </html>
