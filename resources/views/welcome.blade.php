@@ -133,7 +133,6 @@
               $('.output3').text( '・' + $(this).val() );
             });
 
-
         });
       </script>
 
